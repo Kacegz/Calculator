@@ -69,7 +69,7 @@ actionButtons.forEach(action=>{
         operator=action.textContent
         values+=" "
         displayResult.textContent=storeValue;
-    
+        counter=0;
     })
 })
 sum.addEventListener('click',()=>{
@@ -94,7 +94,7 @@ del.addEventListener('click',()=>{
     displayResult.textContent=storeValue;
 })
 dot.addEventListener('click',()=>{
-    if (counter<2){ //im too lazy for a better validator at this point
+    if (counter<1){ //im too lazy for a better validator at this point
         storeValue+=dot.textContent;
         values+=dot.textContent
         displayResult.textContent+=dot.textContent; 
@@ -107,6 +107,7 @@ function purge(){
     operator="";
     storeValue="";
     values=""
+    counter=0
     displayResult.textContent="";
 }
 /*
