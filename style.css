@@ -1,18 +1,19 @@
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
-}
-div{
-    border: 1px solid red;
+    padding-top: 20px;
+    background: #0013A6;
+    background: radial-gradient(circle, #000838 12%, rgba(0,0,0,1) 100%);
 }
 #calculator{
     width: 450px;
     height: 750px;
-    
-    border-radius: 10px;
-    background-color: gray;
+    background-color: transparent;
+    border:4px solid #02E646;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #02E646;
 }
 #top{
     width: 100%;
@@ -21,7 +22,19 @@ div{
 #display{
     height: 100px;
     margin:20px;
-    background-color: black;
+    background-color: transparent;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border:4px solid #02E646;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #02E646;
+}
+#result{
+    color: #02E646;
+    text-shadow: #02E646 1px 1px 10px;
+    text-align: right;
+    font-size: 60px;
 }
 #buttons{
     display: flex;
@@ -37,14 +50,31 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: gray;
+    background-color: transparent;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: bolder;
+    border:4px solid #02E646;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #02E646;
+    color: #02E646;
+    text-shadow: #02E646 1px 0px 10px;
+}
+button:hover{
+    box-shadow: 1px 1px 40px rgba(54, 142, 107, 1);
+}
+button:active{
+    transform: translateY(2px);
 }
 #zero{
     width:212px;
 }
-.num{
-    color:#222
+#author,a{
+    color: #02E646;
+    text-shadow: #02E646 1px 1px 10px;
+    text-align: right;
+    font-size: 30px;
+    margin-top:20px;
 }
-
+#author:hover{
+    text-shadow: #02E646 1px 0px 10px;
+}
