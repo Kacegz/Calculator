@@ -73,16 +73,25 @@ actionButtons.forEach(action=>{
     })
 })
 sum.addEventListener('click',()=>{
-    console.log(storeValue)
     //values=storeValue.split(/\D/g) //shit doesnt work for negatives
     values=values.split(" ")
     firstnum=parseFloat(values[0]);
     secondnum=parseFloat(values[1]);
-    result=Math.round(operate(firstnum,secondnum,operator)*1000)/1000;
-    displayResult.textContent=result;
-    storeValue=result;
-    values=result
-    operator=""
+    if(isNaN(firstnum) || isNaN(secondnum)){
+        displayResult.textContent="ERROR";
+        firstnum="";
+        secondnum="";
+        operator="";
+        storeValue="";
+        values=""
+        counter=0
+    }else{
+        result=Math.round(operate(firstnum,secondnum,operator)*1000)/1000;
+        displayResult.textContent=result;
+        storeValue=result;
+        values=result
+        operator="" 
+    }
     // add error for no value //todo
 })
 
@@ -161,7 +170,6 @@ clear.addEventListener('click',()=>{
 })
 
 del.addEventListener('click',()=>{
-    console.log("hehye")
     storeValue=storeValue.substring(0,storeValue.length-1)
     displayResult.textContent=storeValue;
 })*/
